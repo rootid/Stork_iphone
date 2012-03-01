@@ -1,0 +1,10 @@
+/Users/User/Documents/Stork/Classes/ServerListView.m: In function '-[ServerListView initWithStyle:reuseIdentifier:]':
+/Users/User/Documents/Stork/Classes/ServerListView.m:22: error: 'serverNameLable' undeclared (first use in this function)
+/Users/User/Documents/Stork/Classes/ServerListView.m:22: error: (Each undeclared identifier is reported only once
+/Users/User/Documents/Stork/Classes/ServerListView.m:22: error: for each function it appears in.)
+/Users/User/Documents/Stork/Classes/ServerListView.m: In function '-[ServerListView setServerNameLabel:]':
+/Users/User/Documents/Stork/Classes/ServerListView.m:40: error: 'serverNameLable' undeclared (first use in this function)
+/Users/User/Documents/Stork/Classes/ServerListView.m: In function '-[ServerListView layoutSubviews]':
+/Users/User/Documents/Stork/Classes/ServerListView.m:57: error: 'serverNameLable' undeclared (first use in this function)
+/Users/User/Documents/Stork/Classes/ServerListView.m: In function '-[ServerListView dealloc]':
+/Users/User/Documents/Stork/Classes/ServerListView.m:62: error: 'serverNameLable' undeclared (first use in this function)
