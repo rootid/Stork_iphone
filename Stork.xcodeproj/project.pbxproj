@@ -17,7 +17,10 @@
 		CE836EE614FD7CF300F85032 /* RemoteServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE836EE514FD7CF300F85032 /* RemoteServerViewController.m */; };
 		CE8370B214FDA08400F85032 /* ServerListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8370B114FDA08400F85032 /* ServerListViewCell.m */; };
 		CE8370B514FDA74D00F85032 /* DataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8370B414FDA74D00F85032 /* DataAdapter.m */; };
-		CE83716D14FDB04100F85032 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE83716C14FDB04100F85032 /* LoginView.m */; };
+		CE8524021505DE1A0089F406 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8524011505DE1A0089F406 /* MainViewController.m */; };
+		CE8524081505DE5C0089F406 /* LoginViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8524071505DE5C0089F406 /* LoginViewCell.m */; };
+		CE8524E61505EBD20089F406 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE8524E51505EBD20089F406 /* QuartzCore.framework */; };
+		CE85255D150672950089F406 /* DummyMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE85255C150672950089F406 /* DummyMainController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,8 +43,13 @@
 		CE8370B114FDA08400F85032 /* ServerListViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerListViewCell.m; sourceTree = "<group>"; };
 		CE8370B314FDA74D00F85032 /* DataAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataAdapter.h; sourceTree = "<group>"; };
 		CE8370B414FDA74D00F85032 /* DataAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataAdapter.m; sourceTree = "<group>"; };
-		CE83716B14FDB04100F85032 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
-		CE83716C14FDB04100F85032 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		CE8524001505DE1A0089F406 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		CE8524011505DE1A0089F406 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		CE8524061505DE5C0089F406 /* LoginViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewCell.h; sourceTree = "<group>"; };
+		CE8524071505DE5C0089F406 /* LoginViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewCell.m; sourceTree = "<group>"; };
+		CE8524E51505EBD20089F406 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CE85255B150672950089F406 /* DummyMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyMainController.h; sourceTree = "<group>"; };
+		CE85255C150672950089F406 /* DummyMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DummyMainController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				CE8524E61505EBD20089F406 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +120,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE8524E51505EBD20089F406 /* QuartzCore.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
@@ -127,8 +137,12 @@
 				CE836EE514FD7CF300F85032 /* RemoteServerViewController.m */,
 				CE8370B014FDA08400F85032 /* ServerListViewCell.h */,
 				CE8370B114FDA08400F85032 /* ServerListViewCell.m */,
-				CE83716B14FDB04100F85032 /* LoginView.h */,
-				CE83716C14FDB04100F85032 /* LoginView.m */,
+				CE8524001505DE1A0089F406 /* MainViewController.h */,
+				CE8524011505DE1A0089F406 /* MainViewController.m */,
+				CE8524061505DE5C0089F406 /* LoginViewCell.h */,
+				CE8524071505DE5C0089F406 /* LoginViewCell.m */,
+				CE85255B150672950089F406 /* DummyMainController.h */,
+				CE85255C150672950089F406 /* DummyMainController.m */,
 			);
 			name = uiControllers;
 			sourceTree = "<group>";
@@ -208,7 +222,9 @@
 				CE836EE614FD7CF300F85032 /* RemoteServerViewController.m in Sources */,
 				CE8370B214FDA08400F85032 /* ServerListViewCell.m in Sources */,
 				CE8370B514FDA74D00F85032 /* DataAdapter.m in Sources */,
-				CE83716D14FDB04100F85032 /* LoginView.m in Sources */,
+				CE8524021505DE1A0089F406 /* MainViewController.m in Sources */,
+				CE8524081505DE5C0089F406 /* LoginViewCell.m in Sources */,
+				CE85255D150672950089F406 /* DummyMainController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

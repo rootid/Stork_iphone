@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "MainViewController.h"
+#import "DummyMainController.h"
 
 @interface HomeServerViewController : UITableViewController {
 

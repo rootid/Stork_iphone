@@ -29,7 +29,7 @@
 	//Parse the server names
 	NSString *list = SERVER_LIST;
 	serverList = [list componentsSeparatedByString:@","];
-	NSLog(@" thser list ");
+	NSLog(@"server list ");
 	//arrayForFindList = [[NSArray alloc]initWithObjects:,nil];
 	
 }

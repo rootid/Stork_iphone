@@ -1,49 +1,31 @@
 //
-//  HomeServerViewController.m
+//  MainViewController.m
 //  Stork
 //
-//  Created by Snow Leopard User on 28/02/2012.
+//  Created by Snow Leopard User on 06/03/2012.
 //  Copyright 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "HomeServerViewController.h"
-#import "ServerListViewCell.h"
-#import "DataAdapter.h"
+#import "MainViewController.h"
 
 
-@interface HomeServerViewController(Private)
-
-DataAdapter *dataAdapter;
-NSArray *serverListArray;
-
-@end
-
-@implementation HomeServerViewController
+@implementation MainViewController
 
 
 #pragma mark -
 #pragma mark Initialization
 
 
-- (id) initWithTitle:(NSString *)title
-{
-	if (self = [super initWithStyle:UITableViewStyleGrouped]) {
-        // Custom initialization
-		[self.tabBarItem setTitle:title];		
-    }
-	return self;
-}
-
-/*
 - (id)initWithStyle:(UITableViewStyle)style {
     // Override initWithStyle: if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization.
+		
     }
     return self;
 }
-*/
+
 
 
 #pragma mark -
@@ -52,11 +34,7 @@ NSArray *serverListArray;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	[self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
-	
-	dataAdapter = [[DataAdapter alloc] init];
-	[dataAdapter initializeServerList];
-	serverListArray = [[NSArray alloc] initWithArray:dataAdapter.serverList];
+
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -102,24 +80,21 @@ NSArray *serverListArray;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [serverListArray count];
+    return 1;
 }
 
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-	static NSString *CellIdentifier = @"Cell";
+	[tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    static NSString *CellIdentifier = @"Cell";
     
-    
-	ServerListViewCell *cell = (ServerListViewCell *)[tableView dequeueReusableCellWithIdentifier:
-													  CellIdentifier];
+    LoginViewCell *cell = (LoginViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[ServerListViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
-									reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[LoginViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-	[cell setServerNameLabel:[serverListArray objectAtIndex:indexPath.row]];
     
     return cell;
 }
@@ -170,17 +145,13 @@ NSArray *serverListArray;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-    
-  //  MainViewController *mainViewController = [[MainViewController alloc] initWithNibName:nil bundle:nil];
-//    [self.navigationController pushViewController:mainViewController animated:YES];
-//    [mainViewController release];
-	
-	DummyMainController *mainViewController = [[DummyMainController alloc] initWithNibName:nil bundle:nil];
-    [self.navigationController pushViewController:mainViewController animated:YES];
-    [mainViewController release];
-    
-	
-	
+    /*
+    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    [detailViewController release];
+    */
 }
 
 
