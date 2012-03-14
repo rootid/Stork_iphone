@@ -12,9 +12,13 @@
 @interface DataAdapter : NSObject {
 
 	NSArray *serverList;
+	NSArray *folderList;
 }
 
 @property (nonatomic, retain) NSArray *serverList;
+@property (nonatomic, retain) NSArray *folderList;
+
 - (void) initializeServerList;
+- (void) initializeDirList;
 
 @end

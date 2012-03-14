@@ -52,7 +52,9 @@
 
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section
 {
-	return 4;
+	//if it is login controller 
+	return 5;
+	//if it is file controller return different value
 }
 
 - (UITableViewCell *)tableView:(UITableView *)_tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -65,7 +67,7 @@
     }
 	cell.selectionStyle=UITableViewCellEditingStyleNone;
 	
-	NSInteger leftMargin=125;
+	//NSInteger leftMargin=125;
 	UILabel *lable=nil;
 	UITextField *textField=nil;
 	UIButton *submitButton=nil;
@@ -85,6 +87,7 @@
 			[cell.contentView addSubview:lable];
 			[lable release];
 			textField = [self createTextField:indexPath.row title:nil];
+			[textField setSecureTextEntry:YES];
 			[cell addSubview:textField];
 			[viewArray addObject:textField];
 			[textField release];
@@ -96,6 +99,7 @@
 			
 			textField = [self createTextField:indexPath.row title:nil];
 			[cell addSubview:textField];
+			//[textField setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
 			[viewArray addObject:textField];
 			[textField release];
 			break;
@@ -106,6 +110,7 @@
 			[lable release];
 			
 			textField = [self createTextField:indexPath.row title:nil];
+			[textField setKeyboardType:UIKeyboardTypeNumbersAndPunctuation];
 			[cell addSubview:textField];
 			[viewArray addObject:textField];
 			[textField release];

@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "HomeServerViewController.h"
+#import "RemoteServerViewController.h"
+#import "Constant.h"
+#import "HTTPHandler.h"
 
 
 @interface StorkAppDelegate : NSObject <UIApplicationDelegate,
-                      UITabBarControllerDelegate> {
+                      UITabBarControllerDelegate,HTTPHandlerDelegate> {
     UIWindow *window;
     UITabBarController *tabBarController;
 }
@@ -20,5 +23,6 @@
 @property (nonatomic, retain) UITabBarController *tabBarController;
 
 - (void) addViewControllers;
+- (void) verfiyHTTP;
 @end
 

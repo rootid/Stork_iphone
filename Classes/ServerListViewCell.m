@@ -10,15 +10,15 @@
 
 
 @implementation ServerListViewCell
-
+	
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
 	
 	if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         // Initialization code
 		UIView *myContentView = self.contentView;
 		self.shouldIndentWhileEditing = NO;
-		self.accessoryType=UITableViewCellAccessoryDisclosureIndicator;
-		self.selectionStyle=UITableViewCellSelectionStyleNone;
+		self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+		self.selectionStyle = UITableViewCellSelectionStyleNone;
 		if(serverNameLable == nil)
 		{
 			serverNameLable = [[UILabel alloc]initWithFrame:CGRectZero];

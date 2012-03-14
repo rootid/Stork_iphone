@@ -7,15 +7,32 @@
 //
 
 #import "StorkAppDelegate.h"
-#import "HomeServerViewController.h"
-#import "RemoteServerViewController.h"
-#import "Constant.h"
+
 
 @implementation StorkAppDelegate
 @synthesize window;
 @synthesize tabBarController;
 
+- (void) verfiyHTTP
+{
+	HTTPHandler *httpObj=[HTTPHandler getSharedInstantance];
+	httpObj.delegate = self;
+	[httpObj getContentForURL:[NSString stringWithFormat:@"%@",URL_TEST]];
+	
+}
 
+
+- (void)connection:(HTTPHandler*)connection didReceiveData:(NSData *)data
+{
+ 
+	NSString* aStr;
+	aStr = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+	NSLog(@"Data received %@",aStr);
+}
+- (void)connection:(HTTPHandler *)connection didFailWithError:(NSError *)error
+{
+	NSLog(@"Data failed");
+}
 #pragma mark -
 #pragma mark User defined functions
 
@@ -54,8 +71,10 @@
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
+	
+	[self verfiyHTTP];
     
-	[self addViewControllers];
+	//[self addViewControllers];
 
     [self.window makeKeyAndVisible];
 

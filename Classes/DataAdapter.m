@@ -13,6 +13,7 @@
 @implementation DataAdapter
 
 @synthesize serverList;
+@synthesize folderList;
 
 - (id)init
 {
@@ -30,8 +31,20 @@
 	NSString *list = SERVER_LIST;
 	serverList = [list componentsSeparatedByString:@","];
 	NSLog(@"server list ");
+	
 	//arrayForFindList = [[NSArray alloc]initWithObjects:,nil];
 	
 }
+
+
+- (void) initializeDirList
+{
+	NSString *list = DIR_LIST;
+	
+	folderList = [list componentsSeparatedByString:@","];
+
+}
+
+
 
 @end
