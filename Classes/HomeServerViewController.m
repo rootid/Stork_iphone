@@ -109,16 +109,13 @@ NSArray *serverListArray;
     
 	static NSString *CellIdentifier = @"Cell";
     
-    
 	ServerListViewCell *cell = (ServerListViewCell *)[tableView dequeueReusableCellWithIdentifier:
 													  CellIdentifier];
     if (cell == nil) {
         cell = [[[ServerListViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
 									reuseIdentifier:CellIdentifier] autorelease];
     }
-    
 	[cell setServerNameLabel:[serverListArray objectAtIndex:indexPath.row]];
-    
     return cell;
 }
 
@@ -168,25 +165,11 @@ NSArray *serverListArray;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Navigation logic may go here. Create and push another view controller.
-    
-  //  MainViewController *mainViewController = [[MainViewController alloc] initWithNibName:nil bundle:nil];
-//    [self.navigationController pushViewController:mainViewController animated:YES];
-//    [mainViewController release];
-	
-//	DummyMainController *mainViewController = [[DummyMainController alloc] initWithNibName:nil bundle:nil];
-//    [self.navigationController pushViewController:mainViewController animated:YES];
-//    [mainViewController release];
-    
-	
 	NSString *serverName = [serverListArray objectAtIndex:indexPath.row];
-	
-	DLSController *mainViewController = [[DLSController alloc] initWithTitle:serverName];
-	//NSLog(@" server title %@",[serverListArray objectAtIndex:indexPath.row]);
+	DummyMainController *mainViewController = [[DummyMainController alloc] initWithTitle:serverName];
     [self.navigationController pushViewController:mainViewController animated:YES];
     [mainViewController release];
-	
-	
-	
+    
 }
 
 

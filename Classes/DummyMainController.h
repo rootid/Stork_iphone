@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Constant.h"
+#import "DLSController.h"
 
 @interface DummyMainController : UIViewController <UITableViewDelegate,
 													UITableViewDataSource,

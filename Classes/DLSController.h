@@ -8,11 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import "DataAdapter.h"
-#import "DLSCellView.h"
+#import "Tree.h"
+#import "TreeNodeCell.h"
 #import "Constant.h"
+#import "HTTPHandler.h"
 
-@interface DLSController : UITableViewController {
+@interface DLSController : UITableViewController<HTTPHandlerDelegate> {
 	
+	Tree* tree;
+	NSArray* elements;
 
 }
 

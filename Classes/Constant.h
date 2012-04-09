@@ -15,6 +15,7 @@
 #define PASS_WORD @"Password"
 #define PROTOCOL  @"Protocol"
 #define PORT_NUMBER @"Port-Number"
+#define PATH_NAME @"Path"
 #define SUBMIT  @"Submit"
 #define EMPTY_STRING @""
 #define DIR_LIST @"testFolder,testdir,hello.c"
@@ -23,6 +24,7 @@
 #define PASS_WORD_TEXT 2
 #define PROTOCOL_TEXT  3
 #define PORT_NUMBER_TEXT 4
+#define PATH_TEXT 5
 
 #define URL_TEST @"http://www.w3schools.com/xml/xml_server.asp"
 

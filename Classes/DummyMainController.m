@@ -8,8 +8,22 @@
 
 #import "DummyMainController.h"
 
+//Private member declaration
+@interface DummyMainController () 
+NSString *serverName;
+@end
 
 @implementation DummyMainController
+
+- (id) initWithTitle:(NSString *)title
+{
+	if (self = [super init]) {
+        // Custom initialization
+		[self.navigationItem setTitle:title];	
+		serverName = title;
+    }
+	return self;
+}
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
@@ -53,7 +67,7 @@
 - (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section
 {
 	//if it is login controller 
-	return 5;
+	return 6;
 	//if it is file controller return different value
 }
 
@@ -115,8 +129,20 @@
 			[viewArray addObject:textField];
 			[textField release];
 			break;
-			
 		case 4:
+			lable = [self createLabel:PATH_NAME];
+			[cell.contentView addSubview:lable];
+			[lable release];
+			
+			textField = [self createTextField:indexPath.row title:nil];
+			[textField setSecureTextEntry:YES];
+			[cell addSubview:textField];
+			[viewArray addObject:textField];
+			[textField release];
+			break;
+
+			
+		case 5:
 			submitButton=[UIButton buttonWithType:UIButtonTypeRoundedRect];
 			submitButton.frame=CGRectMake(220, 5, 70,25);
 			[submitButton setTitle:SUBMIT forState:UIControlStateNormal];
@@ -131,7 +157,10 @@
 }
 -(void)submitButtonAction{
 
-	
+	 DLSController *mainViewController = [[DLSController alloc] initWithTitle:serverName];
+	//	//NSLog(@" server title %@",[serverListArray objectAtIndex:indexPath.row]);
+	 [self.navigationController pushViewController:mainViewController animated:YES];
+	 [mainViewController release];
 }
 
 -(UILabel *) createLabel:(NSString *)_name
@@ -182,6 +211,9 @@
 			break;
 			
 		case 2:
+			//[addDealViewCntr.dealObject setOther:textField.text];
+			break;
+		case 4:
 			//[addDealViewCntr.dealObject setOther:textField.text];
 			break;
 	}

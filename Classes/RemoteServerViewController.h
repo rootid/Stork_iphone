@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DummyMainController.h"
+#import "ServerListViewCell.h"
+#import "DataAdapter.h"
+#import "DLSController.h"
 
 @interface RemoteServerViewController : UITableViewController {
 

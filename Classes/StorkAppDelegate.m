@@ -72,9 +72,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
 	
-	[self verfiyHTTP];
+	//[self verfiyHTTP];
     
-	//[self addViewControllers];
+	[self addViewControllers];
 
     [self.window makeKeyAndVisible];
 

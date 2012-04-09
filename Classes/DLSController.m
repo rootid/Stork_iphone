@@ -12,7 +12,10 @@
 
 DataAdapter *dataAdapter;
 NSArray *folderListArray;
-
+//TODO put tree element here
+-(void)initWithInitialData;
+-(void)onExpandedButtonTouch :(TreeNode *) node;
+-(void) initHTTPReceiver;
 @end
 
 @implementation DLSController
@@ -24,7 +27,7 @@ NSArray *folderListArray;
 
 - (id) initWithTitle:(NSString *)title
 {
-	if (self = [super initWithStyle:UITableViewStyleGrouped]) {
+	if (self = [super initWithStyle:UITableViewCellStyleDefault]) {
         // Custom initialization
 		[self.navigationItem setTitle:title];		
     }
@@ -45,13 +48,98 @@ NSArray *folderListArray;
 	[dataAdapter initializeDirList];
 	folderListArray = [[NSArray alloc] initWithArray:dataAdapter.folderList];
 	
-	UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:UPLOAD style:UIBarButtonItemStylePlain target:self action:@selector(uploadFiles:)];          
-	self.navigationItem.rightBarButtonItem = anotherButton;
-	[anotherButton release];
+	UIBarButtonItem *uploadButton = [[UIBarButtonItem alloc] initWithTitle:UPLOAD 
+									style:UIBarButtonItemStylePlain 
+									target:self action:@selector(uploadFiles:)];          
+	self.navigationItem.rightBarButtonItem = uploadButton;
+	[uploadButton release];
 	
+	tree = [[Tree alloc] init];
+	[self initHTTPReceiver];
+	[self initWithInitialData];
 	
 }
 
+-(void)initHTTPReceiver {
+	HTTPHandler *httpObj=[HTTPHandler getSharedInstantance];
+	httpObj.delegate = self;
+	[httpObj getContentForURL:[NSString stringWithFormat:@"%@",URL_TEST]];
+}
+
+-(void)initWithInitialData {
+	
+	//populate with initial data [root,apache,bin,Test,test]
+	//if it is directory add dummy data
+	TreeNode* root = [[[TreeNode alloc] init] retain];
+	TreeNode* apache = [[[TreeNode alloc] init] retain];
+	TreeNode* bin = [[[TreeNode alloc] init] retain];
+	TreeNode* dummyApache = [[[TreeNode alloc] init] retain];
+	TreeNode* dummyBin = [[[TreeNode alloc] init] retain];
+
+	[root setLabel:@"root"];
+	[apache setLabel:@"apache"];
+	[bin setLabel:@"bin"];
+	[dummyBin setLabel:@"con"];
+	[dummyApache setLabel:@"con"];
+	
+	[root addChildren:apache];
+	[apache addChildren:dummyApache];
+	[root addChildren:bin];
+	[bin addChildren:dummyBin];
+	[tree setRoot:root];
+	[root unSetRecursively];
+	
+	if([[root children] count] > 0){
+		[root setExpanded:![root expanded]];
+	}
+	elements = [tree arrayRappresentation];
+	
+	[self onExpandedButtonTouch:root];
+}
+
+
+#pragma mark -
+#pragma mark HTTP delegate
+- (void)connection:(HTTPHandler*)connection didReceiveData:(NSData *)data
+{
+	
+	NSString* aStr;
+	aStr = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+	NSLog(@"Data received %@",aStr);
+}
+- (void)connection:(HTTPHandler *)connection didFailWithError:(NSError *)error
+{
+	NSLog(@"Data failed");
+}
+
+
+#pragma mark -
+#pragma mark button selector methods
+
+-(void)onExpandedButtonTouch:(TreeNode*)node{
+	
+	NSLog(@"selected tree : %@",[node label]);
+	//TreeNode *node1 = [tree root];
+	//	TreeNode* child1=[[[TreeNode alloc] init] retain];
+	//	TreeNode* child2=[[[TreeNode alloc] init] retain];
+	//	[child1 setLabel:@"child12"];
+	//	[child2 setLabel:@"child2"];
+	//	[node1 addChildren:child1];
+	//	[node1 addChildren:child2];
+	elements = [tree arrayRappresentation];
+	[self.tableView reloadData];	
+}
+
+-(void)onCheckboxSelected :(TreeNode *)node {
+	
+	if ([node isSelected] == NO) {
+		[node setSelectedRecursively];
+	}
+	else {
+		[node unSetRecursively];
+	}
+	[self.tableView reloadData];
+}
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -93,7 +181,7 @@ NSArray *folderListArray;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [folderListArray count];
+    return [elements count];
 }
 
 
@@ -102,16 +190,17 @@ NSArray *folderListArray;
     
     static NSString *CellIdentifier = @"Cell";
     
-	DLSCellView *cell = (DLSCellView *)[tableView dequeueReusableCellWithIdentifier:
-													  CellIdentifier];
+    TreeNodeCell *cell = (TreeNodeCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[DLSCellView alloc] initWithStyle:UITableViewCellStyleDefault 
-										  reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[TreeNodeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-	[cell setlblForFolder:[folderListArray objectAtIndex:indexPath.row]];
+	TreeNode* node = [elements objectAtIndex:indexPath.row];
+	[cell setOwner:self];
+	[cell setOnExpandedButtonTouch:@selector(onExpandedButtonTouch:)];
+	[cell setOnCheckboxSelected:@selector(onCheckboxSelected:)];
+	[cell setTreeNode:node];
 	
-    
     return cell;
 }
 
@@ -161,14 +250,6 @@ NSArray *folderListArray;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-	DLSCellView *newCell = (DLSCellView *)[tableView cellForRowAtIndexPath:indexPath];
-	
-    if (newCell.accessoryType == UITableViewCellAccessoryNone) {
-        newCell.accessoryType = UITableViewCellAccessoryCheckmark;
-    }else {
-        newCell.accessoryType = UITableViewCellAccessoryNone;
-    }
-	
 }
 
 

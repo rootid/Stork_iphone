@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MainViewController.h"
 #import "DummyMainController.h"
 #import "ServerListViewCell.h"
 #import "DataAdapter.h"
