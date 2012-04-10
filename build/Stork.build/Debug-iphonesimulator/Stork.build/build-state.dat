@@ -1,7 +1,7 @@
 TStork
 v7
 r0
-t355712141.801776
+t355715833.455425
 cCheck dependencies
 cProcessInfoPlistFile /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Info.plist Stork-Info.plist
 cCompileXIB /Users/User/Documents/Stork/MainWindow.xib
@@ -525,7 +525,7 @@ s909
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies355712141#355712141#0(0"0(0#1#0"8621627392#0"0#
+lSLF07#2@18"Check dependencies355715833#355715833#0(0"0(0#1#0"8619052896#0"0#
 
 CCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DLSCellView.o /Users/User/Documents/Stork/Classes/DLSCellView.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s353455441.696174
