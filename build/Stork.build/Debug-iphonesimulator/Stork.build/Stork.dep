@@ -4,7 +4,7 @@
 6e8a6e871800f37d8fd78acd41198a22 c031adf4291d30186c8f485fcf0ae0cb ffffffffffffffffffffffffffffffff 8856 /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/Stack.o
 6e8a6e87555401f08fd78acd411987f2 49421d1a89570e26f1dccf0d8bda61f6 ffffffffffffffffffffffffffffffff 56036 /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DLSController.o
 6e8a6e871800f0288fd78acd41198233 6cd1b9f493fd400ac97f0d07b63ee22c ffffffffffffffffffffffffffffffff 18008 /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/HTTPHandler.o
-6e8a6e87180204408fd78acd41198c6c eb5b3c0f731b9415391d1c8ea2f22c43 ffffffffffffffffffffffffffffffff 67184 /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DummyMainController.o
+6e8a6e871802e2128fd78acd41198cb6 eb5b3c0f731b9415391d1c8ea2f22c43 ffffffffffffffffffffffffffffffff 67336 /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DummyMainController.o
 6e8a6e875783935f8fd78acd41198831 f90c81f3de4a0490834751da24c64b26 ffffffffffffffffffffffffffffffff 10556 /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DataAdapter.o
 6e8a6e87182e4de98fd78acd41199043 da085eb0a60f44549f88af4c5e22ab49 ffffffffffffffffffffffffffffffff 43772 /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/ServerListViewCell.o
 6e8a6e87557a83938fd78acd41199093 e24028a77d302d9928f609801889d464 ffffffffffffffffffffffffffffffff 45976 /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/RemoteServerViewController.o
@@ -12,9 +12,10 @@
 6e8a6e8755bc78498fd78acd4119914b 67de9b65c468a46d6ef2619a4134ed13 ffffffffffffffffffffffffffffffff 62928 /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/StorkAppDelegate.o
 6e8a6e87574f6b248fd78acd41199633 652c8351a6d4b05b10f6b6e07b30989e ffffffffffffffffffffffffffffffff 6288 /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/main.o
 00000000000000000000000000000000 c67335bd8804ae8c61fa512541a4ebf1 ffffffffffffffffffffffffffffffff 102 /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app.dSYM
-da4996775b5cf03b59819328df0993fa 20ca9f0a37b9da9ee377a73c5f527dd9 ffffffffffffffffffffffffffffffff 408 /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app
-6812114112abff1c9cc693eb03df6370 11126a5c253e8717eed623f5cccbd8b1 ffffffffffffffffffffffffffffffff 79376 /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Stork
+d323b7cf8c9bc7304d895c21250bf5af 20ca9f0a37b9da9ee377a73c5f527dd9 ffffffffffffffffffffffffffffffff 442 /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app
+6812114112ab194e9cc693eb03df63aa 11126a5c253e8717eed623f5cccbd8b1 ffffffffffffffffffffffffffffffff 79376 /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Stork
 000000004f4f98580000000000001e74 6e8a6e871a1ba49d8fd78acd41198389 ffffffffffffffffffffffffffffffff 15814064 /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch.gch
+00000000000000000000000000000000 096a21b8d7c7d1591408cf09fa02668f ffffffffffffffffffffffffffffffff 856 /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/folder_small.png
 00000000000000000000000000000000 87f25f01d5ab3de9868e4cb44f655374 ffffffffffffffffffffffffffffffff 1072 /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/plus.png
 00000000000000000000000000000000 c010771d4cc2eb7b1ba0e522d9f1ed8a ffffffffffffffffffffffffffffffff 4087 /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/minus.png
 00000000000000000000000000000000 15d6caec49086e6fef5fa2b2074903b0 ffffffffffffffffffffffffffffffff 667 /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/checkbox-checked.png

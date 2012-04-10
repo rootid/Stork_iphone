@@ -135,7 +135,6 @@ NSString *serverName;
 			[lable release];
 			
 			textField = [self createTextField:indexPath.row title:nil];
-			[textField setSecureTextEntry:YES];
 			[cell addSubview:textField];
 			[viewArray addObject:textField];
 			[textField release];
@@ -195,7 +194,8 @@ NSString *serverName;
 	[UITableView setAnimationBeginsFromCurrentState:YES];
 	[UITableView setAnimationDuration:0.3f];
 	NSInteger tblHeight=tableView.frame.size.height;
-	if(textField.tag==2)
+	if(textField.tag == 3 || textField.tag == 4 || 
+	   textField.tag == 5)
 	{
 		tableView.frame=CGRectMake(0,-70,320,tblHeight);
 	}else {
@@ -225,7 +225,7 @@ NSString *serverName;
 - (BOOL)textFieldShouldReturn:(UITextField *)textField              
 {
 	[textField resignFirstResponder];
-	if(textField.tag==2)
+	if(textField.tag == 2 || textField.tag == 3 || textField.tag == 4)
 	{
 		[UITableView beginAnimations:nil context:nil];
 		[UITableView setAnimationBeginsFromCurrentState:YES];

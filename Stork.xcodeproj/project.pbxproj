@@ -23,6 +23,7 @@
 		CE71293715339F9A0034DD62 /* Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71293115339F9A0034DD62 /* Tree.m */; };
 		CE71293815339F9A0034DD62 /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71293315339F9A0034DD62 /* TreeNode.m */; };
 		CE71293915339F9A0034DD62 /* TreeNodeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE71293515339F9A0034DD62 /* TreeNodeCell.m */; };
+		CE73130F1533BC6E00CE51D2 /* folder_small.png in Resources */ = {isa = PBXBuildFile; fileRef = CE73130E1533BC6E00CE51D2 /* folder_small.png */; };
 		CE7DD13E1507D2DA0011FBC6 /* HTTPHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7DD13D1507D2DA0011FBC6 /* HTTPHandler.m */; };
 		CE836EE314FD7CD700F85032 /* HomeServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE836EE214FD7CD700F85032 /* HomeServerViewController.m */; };
 		CE836EE614FD7CF300F85032 /* RemoteServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE836EE514FD7CF300F85032 /* RemoteServerViewController.m */; };
@@ -58,6 +59,7 @@
 		CE71293315339F9A0034DD62 /* TreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeNode.m; sourceTree = "<group>"; };
 		CE71293415339F9A0034DD62 /* TreeNodeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeNodeCell.h; sourceTree = "<group>"; };
 		CE71293515339F9A0034DD62 /* TreeNodeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeNodeCell.m; sourceTree = "<group>"; };
+		CE73130E1533BC6E00CE51D2 /* folder_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder_small.png; sourceTree = "<group>"; };
 		CE7DD13C1507D2DA0011FBC6 /* HTTPHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPHandler.h; sourceTree = "<group>"; };
 		CE7DD13D1507D2DA0011FBC6 /* HTTPHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPHandler.m; sourceTree = "<group>"; };
 		CE836EDE14FD7A6200F85032 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE73130E1533BC6E00CE51D2 /* folder_small.png */,
 				CE71292215339EF00034DD62 /* minus.png */,
 				CE71292315339EF00034DD62 /* plus.png */,
 				CE71291A15339EB80034DD62 /* checkbox.png */,
@@ -250,6 +253,7 @@
 				CE71292115339EB80034DD62 /* checkbox-checked.png in Resources */,
 				CE71292415339EF00034DD62 /* minus.png in Resources */,
 				CE71292515339EF00034DD62 /* plus.png in Resources */,
+				CE73130F1533BC6E00CE51D2 /* folder_small.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
