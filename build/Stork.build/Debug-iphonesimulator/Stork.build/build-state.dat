@@ -1,7 +1,7 @@
 TStork
 v7
 r0
-t355715833.455425
+t356412229.474385
 cCheck dependencies
 cProcessInfoPlistFile /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Info.plist Stork-Info.plist
 cCompileXIB /Users/User/Documents/Stork/MainWindow.xib
@@ -26,6 +26,7 @@ cCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i38
 cCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/Tree.o /Users/User/Documents/Stork/Classes/Tree.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/TreeNode.o /Users/User/Documents/Stork/Classes/TreeNode.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/TreeNodeCell.o /Users/User/Documents/Stork/Classes/TreeNodeCell.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/ServerInformation.o /Users/User/Documents/Stork/Classes/ServerInformation.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cLd /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Stork normal i386
 cGenerateDSYMFile /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app.dSYM /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Stork
 cTouch /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app
@@ -71,9 +72,9 @@ t1297487363
 s7759984
 
 N/Users/User/Documents/Stork/Classes/Constant.h
-c000000004F8360D800000000000002F3
-t1334010072
-s755
+c000000004F8E16290000000000000340
+t1334711849
+s832
 
 N/Users/User/Documents/Stork/Classes/DLSCellView.h
 c000000004F610ABB0000000000000171
@@ -88,20 +89,21 @@ s1681
 i"DLSCellView.h"
 
 N/Users/User/Documents/Stork/Classes/DLSController.h
-c000000004F837190000000000000018F
-t1334014352
-s399
+c000000004F8E33AC0000000000000208
+t1334719404
+s520
 i<UIKit/UIKit.h>
 i"DataAdapter.h"
 i"Tree.h"
 i"TreeNodeCell.h"
 i"Constant.h"
 i"HTTPHandler.h"
+i"ServerInformation.h"
 
 N/Users/User/Documents/Stork/Classes/DLSController.m
-c000000004F8370960000000000001BEE
-t1334014102
-s7150
+c000000004F8E33B30000000000002658
+t1334719411
+s9816
 i"DLSController.h"
 
 N/Users/User/Documents/Stork/Classes/DataAdapter.h
@@ -118,35 +120,36 @@ i"DataAdapter.h"
 i"Constant.h"
 
 N/Users/User/Documents/Stork/Classes/DummyMainController.h
-c000000004F83654C0000000000000256
-t1334011212
-s598
+c000000004F8E1FA60000000000000274
+t1334714278
+s628
 i<UIKit/UIKit.h>
 i"Constant.h"
 i"DLSController.h"
+i"ServerInformation.h"
 
 N/Users/User/Documents/Stork/Classes/DummyMainController.m
-c000000004F8383540000000000001AAE
-t1334018900
-s6830
+c000000004F8E33B70000000000001D90
+t1334719415
+s7568
 i"DummyMainController.h"
 
 N/Users/User/Documents/Stork/Classes/HTTPHandler.h
-c000000004F61242A00000000000002C4
-t1331766314
-s708
+c000000004F8DDE9500000000000002F1
+t1334697621
+s753
 i<Foundation/Foundation.h>
 
 N/Users/User/Documents/Stork/Classes/HTTPHandler.m
-c000000004F61277F000000000000096C
-t1331767167
-s2412
+c000000004F8DE4520000000000000C8A
+t1334699090
+s3210
 i"HTTPHandler.h"
 
 N/Users/User/Documents/Stork/Classes/HomeServerViewController.h
-c000000004F837103000000000000016F
-t1334014211
-s367
+c000000004F8E1FA60000000000000170
+t1334714278
+s368
 i<UIKit/UIKit.h>
 i"DummyMainController.h"
 i"ServerListViewCell.h"
@@ -154,8 +157,8 @@ i"DataAdapter.h"
 i"DLSController.h"
 
 N/Users/User/Documents/Stork/Classes/HomeServerViewController.m
-c000000004F8372E10000000000001434
-t1334014689
+c000000004F8E32080000000000001434
+t1334718984
 s5172
 i"HomeServerViewController.h"
 
@@ -216,6 +219,18 @@ t1334014950
 s4851
 i"RemoteServerViewController.h"
 
+N/Users/User/Documents/Stork/Classes/ServerInformation.h
+c000000004F8E1FA6000000000000020C
+t1334714278
+s524
+i<Foundation/Foundation.h>
+
+N/Users/User/Documents/Stork/Classes/ServerInformation.m
+c000000004F8E1DF7000000000000015A
+t1334713847
+s346
+i"ServerInformation.h"
+
 N/Users/User/Documents/Stork/Classes/ServerListView.h
 c000000004F4D690400000000000000E5
 t1330473220
@@ -263,9 +278,9 @@ i"Constant.h"
 i"HTTPHandler.h"
 
 N/Users/User/Documents/Stork/Classes/StorkAppDelegate.m
-c000000004F69FD7900000000000010F3
-t1332346233
-s4339
+c000000004F8E019900000000000012CD
+t1334706585
+s4813
 i"StorkAppDelegate.h"
 
 N/Users/User/Documents/Stork/Classes/StorkViewController.h
@@ -314,10 +329,22 @@ i<UIKit/UIKit.h>
 i"TreeNode.h"
 
 N/Users/User/Documents/Stork/Classes/TreeNodeCell.m
-c000000004F8369560000000000000C6F
-t1334012246
-s3183
+c000000004F8E09730000000000000C93
+t1334708595
+s3219
 i"TreeNodeCell.h"
+
+N/Users/User/Documents/Stork/Classes/untitled.h
+c000000004F8E170700000000000000DC
+t1334712071
+s220
+i<Foundation/Foundation.h>
+
+N/Users/User/Documents/Stork/Classes/untitled.m
+c000000004F8E170700000000000000C4
+t1334712071
+s196
+i"untitled.h"
 
 N/Users/User/Documents/Stork/MainWindow.xib
 c000000004F4D62CD000000000000458B
@@ -337,11 +364,11 @@ i<Foundation/Foundation.h>
 i<UIKit/UIKit.h>
 
 N/Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app
-t1334019312
+t1334719417
 s442
 
 N/Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app.dSYM
-t1334018901
+t1334719417
 s102
 
 N/Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Info.plist
@@ -357,8 +384,8 @@ t1331016949
 s8
 
 N/Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Stork
-t1334018901
-s79376
+t1334719417
+s90844
 
 N/Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/StorkViewController.nib
 t1330468589
@@ -397,23 +424,23 @@ t1331762641
 s44412
 
 N/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DLSController.o
-t1334014373
-s56036
+t1334719416
+s63396
 
 N/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DataAdapter.o
-t1334010318
+t1334712368
 s10556
 
 N/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DummyMainController.o
-t1334018901
-s67336
+t1334719415
+s69600
 
 N/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/HTTPHandler.o
-t1331767168
-s18008
+t1334699092
+s20328
 
 N/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/HomeServerViewController.o
-t1334014752
+t1334719415
 s45900
 
 N/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/LoginView.o
@@ -429,8 +456,12 @@ t1334010319
 s43892
 
 N/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/RemoteServerViewController.o
-t1334014956
+t1334719415
 s45976
+
+N/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/ServerInformation.o
+t1334714279
+s11216
 
 N/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/ServerListView.o
 t2
@@ -445,13 +476,17 @@ t1334012248
 s8856
 
 N/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/Stork.LinkFileList
-c000000004F8376B600000000000005E6
-t1334015670
-s1510
+c000000004F8E182F000000000000065E
+t1334712367
+s1630
+
+N/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/StorkAppDelegate.mi
+t1334704778
+s1006549
 
 N/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/StorkAppDelegate.o
-t1334014372
-s62928
+t1334719415
+s63924
 
 N/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/StorkViewController.o
 t1330468593
@@ -466,12 +501,16 @@ t1334012248
 s18844
 
 N/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/TreeNodeCell.o
-t1334012248
-s53476
+t1334708600
+s53636
 
 N/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/main.o
 t1331016957
 s6288
+
+N/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/untitled.o
+t2
+s0
 
 N/Users/User/Documents/Stork/checkbox-checked.png
 c000000004F83669D000000000000029B
@@ -523,9 +562,22 @@ c000000004F4D4254000000000000038D
 t1330463316
 s909
 
+C<C0027:'CompileC StorkAppDelegate.o':P9:W0>
+s356397574.703951
+e356397578.396186
+r1
+xCompileC
+xbuild/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/StorkAppDelegate.o
+x/Users/User/Documents/Stork/Classes/StorkAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@62"Compile /Users/User/Documents/Stork/Classes/StorkAppDelegate.m356397574#356397578#0(0"0(0#0#54"/Users/User/Documents/Stork/Classes/StorkAppDelegate.m7575173738941018112#1691"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /Users/User/Documents/Stork/Stork_Prefix.pch -fpch-preprocess -E /Users/User/Documents/Stork/Classes/StorkAppDelegate.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/StorkAppDelegate.mi0#
+
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies355715833#355715833#0(0"0(0#1#0"8619052896#0"0#
+lSLF07#2@18"Check dependencies356412229#356412229#0(0"0(0#1#0"8636967200#0"0#
 
 CCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DLSCellView.o /Users/User/Documents/Stork/Classes/DLSCellView.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s353455441.696174
@@ -541,8 +593,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@57"Compile /Users/User/Documents/Stork/Classes/DLSCellView.m353455441#353455441#0(0"0(0#0#49"/Users/User/Documents/Stork/Classes/DLSCellView.m8626682688#1775"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/DLSCellView.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DLSCellView.o0#
 
 CCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DLSController.o /Users/User/Documents/Stork/Classes/DLSController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s355707173.708633
-e355707173.960728
+s356412215.905267
+e356412216.280141
 r1
 xCompileC
 xbuild/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DLSController.o
@@ -551,11 +603,11 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@59"Compile /Users/User/Documents/Stork/Classes/DLSController.m355707173#355707173#0(0"0(0#0#51"/Users/User/Documents/Stork/Classes/DLSController.m8615329408#1779"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/DLSController.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DLSController.o0#
+lSLF07#2@59"Compile /Users/User/Documents/Stork/Classes/DLSController.m356412215#356412216#0(0"0(0#0#51"/Users/User/Documents/Stork/Classes/DLSController.m8637013696#1779"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/DLSController.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DLSController.o0#
 
 CCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DataAdapter.o /Users/User/Documents/Stork/Classes/DataAdapter.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s355703118.656968
-e355703118.933653
+s356405168.298245
+e356405168.390221
 r1
 xCompileC
 xbuild/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DataAdapter.o
@@ -564,11 +616,11 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@57"Compile /Users/User/Documents/Stork/Classes/DataAdapter.m355703118#355703118#0(0"0(0#0#49"/Users/User/Documents/Stork/Classes/DataAdapter.m8614931968#1775"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/DataAdapter.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DataAdapter.o0#
+lSLF07#2@57"Compile /Users/User/Documents/Stork/Classes/DataAdapter.m356405168#356405168#0(0"0(0#0#49"/Users/User/Documents/Stork/Classes/DataAdapter.m8639106912#1775"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/DataAdapter.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DataAdapter.o0#
 
 CCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DummyMainController.o /Users/User/Documents/Stork/Classes/DummyMainController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s355711701.152933
-e355711701.726169
+s356412215.673850
+e356412215.905082
 r1
 xCompileC
 xbuild/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DummyMainController.o
@@ -577,13 +629,13 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-o/Users/User/Documents/Stork/Classes/DummyMainController.m:249: warning: incomplete implementation of class 'DummyMainController'
-o/Users/User/Documents/Stork/Classes/DummyMainController.m:249: warning: method definition for '-initWithController' not found
-lSLF07#2@65"Compile /Users/User/Documents/Stork/Classes/DummyMainController.m355711701#355711701#0(255"/Users/User/Documents/Stork/Classes/DummyMainController.m:249: warning: incomplete implementation of class 'DummyMainController'/Users/User/Documents/Stork/Classes/DummyMainController.m:249: warning: method definition for '-initWithController' not found2(22@56"Incomplete implementation of class 'DummyMainController'355711701#0#129#0(6@57"/Users/User/Documents/Stork/Classes/DummyMainController.m355711700#249#0#249#0#38"incomplete implementation of class '*'0(22@53"Method definition for '-initWithController' not found355711701#129#126#0(6@57"/Users/User/Documents/Stork/Classes/DummyMainController.m355711700#249#0#249#0#35"method definition for '*' not found0(0#0#57"/Users/User/Documents/Stork/Classes/DummyMainController.m8621776064#1791"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/DummyMainController.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DummyMainController.o0#
+o/Users/User/Documents/Stork/Classes/DummyMainController.m:270: warning: incomplete implementation of class 'DummyMainController'
+o/Users/User/Documents/Stork/Classes/DummyMainController.m:270: warning: method definition for '-initWithController' not found
+lSLF07#2@65"Compile /Users/User/Documents/Stork/Classes/DummyMainController.m356412215#356412216#0(255"/Users/User/Documents/Stork/Classes/DummyMainController.m:270: warning: incomplete implementation of class 'DummyMainController'/Users/User/Documents/Stork/Classes/DummyMainController.m:270: warning: method definition for '-initWithController' not found2(22@56"Incomplete implementation of class 'DummyMainController'356412215#0#129#0(6@57"/Users/User/Documents/Stork/Classes/DummyMainController.m356412215#270#0#270#0#38"incomplete implementation of class '*'0(22@53"Method definition for '-initWithController' not found356412215#129#126#0(6@57"/Users/User/Documents/Stork/Classes/DummyMainController.m356412215#270#0#270#0#35"method definition for '*' not found0(0#0#57"/Users/User/Documents/Stork/Classes/DummyMainController.m8622439680#1791"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/DummyMainController.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/DummyMainController.o0#
 
 CCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/HTTPHandler.o /Users/User/Documents/Stork/Classes/HTTPHandler.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s353459967.971887
-e353459968.638802
+s356391892.054918
+e356391892.200136
 r1
 xCompileC
 xbuild/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/HTTPHandler.o
@@ -592,11 +644,11 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@57"Compile /Users/User/Documents/Stork/Classes/HTTPHandler.m353459967#353459968#0(0"0(0#0#49"/Users/User/Documents/Stork/Classes/HTTPHandler.m8634821856#1775"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/HTTPHandler.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/HTTPHandler.o0#
+lSLF07#2@57"Compile /Users/User/Documents/Stork/Classes/HTTPHandler.m356391892#356391892#0(0"0(0#0#49"/Users/User/Documents/Stork/Classes/HTTPHandler.m8612411392#1775"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/HTTPHandler.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/HTTPHandler.o0#
 
 CCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/HomeServerViewController.o /Users/User/Documents/Stork/Classes/HomeServerViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s355707551.754271
-e355707552.407454
+s356412215.410704
+e356412215.544076
 r1
 xCompileC
 xbuild/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/HomeServerViewController.o
@@ -605,7 +657,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@70"Compile /Users/User/Documents/Stork/Classes/HomeServerViewController.m355707551#355707552#0(0"0(0#0#62"/Users/User/Documents/Stork/Classes/HomeServerViewController.m8618378048#1801"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/HomeServerViewController.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/HomeServerViewController.o0#
+lSLF07#2@70"Compile /Users/User/Documents/Stork/Classes/HomeServerViewController.m356412215#356412215#0(0"0(0#0#62"/Users/User/Documents/Stork/Classes/HomeServerViewController.m8640590976#1801"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/HomeServerViewController.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/HomeServerViewController.o0#
 
 CCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/LoginView.o /Users/User/Documents/Stork/Classes/LoginView.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s352707436.195579
@@ -665,8 +717,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@64"Compile /Users/User/Documents/Stork/Classes/MainViewController.m355703118#355703119#0(0"0(0#0#56"/Users/User/Documents/Stork/Classes/MainViewController.m8613911040#1789"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/MainViewController.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/MainViewController.o0#
 
 CCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/RemoteServerViewController.o /Users/User/Documents/Stork/Classes/RemoteServerViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s355707756.510829
-e355707756.877887
+s356412215.544173
+e356412215.673579
 r1
 xCompileC
 xbuild/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/RemoteServerViewController.o
@@ -675,7 +727,20 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@72"Compile /Users/User/Documents/Stork/Classes/RemoteServerViewController.m355707756#355707756#0(0"0(0#0#64"/Users/User/Documents/Stork/Classes/RemoteServerViewController.m8617567840#1805"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/RemoteServerViewController.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/RemoteServerViewController.o0#
+lSLF07#2@72"Compile /Users/User/Documents/Stork/Classes/RemoteServerViewController.m356412215#356412215#0(0"0(0#0#64"/Users/User/Documents/Stork/Classes/RemoteServerViewController.m8627594176#1805"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/RemoteServerViewController.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/RemoteServerViewController.o0#
+
+CCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/ServerInformation.o /Users/User/Documents/Stork/Classes/ServerInformation.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s356407079.516120
+e356407079.615463
+r1
+xCompileC
+xbuild/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/ServerInformation.o
+x/Users/User/Documents/Stork/Classes/ServerInformation.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/User/Documents/Stork/Classes/ServerInformation.m356407079#356407079#0(0"0(0#0#55"/Users/User/Documents/Stork/Classes/ServerInformation.m8639961024#1787"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/ServerInformation.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/ServerInformation.o0#
 
 CCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/ServerListView.o /Users/User/Documents/Stork/Classes/ServerListView.m normal i386 objective-c com.apple.compilers.gcc.4_2
 r0
@@ -707,8 +772,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@51"Compile /Users/User/Documents/Stork/Classes/Stack.m355705048#355705048#0(0"0(0#0#43"/Users/User/Documents/Stork/Classes/Stack.m8618365664#1763"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/Stack.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/Stack.o0#
 
 CCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/StorkAppDelegate.o /Users/User/Documents/Stork/Classes/StorkAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s355707172.495459
-e355707172.782976
+s356412215.275448
+e356412215.410575
 r1
 xCompileC
 xbuild/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/StorkAppDelegate.o
@@ -717,7 +782,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@62"Compile /Users/User/Documents/Stork/Classes/StorkAppDelegate.m355707172#355707172#0(0"0(0#0#54"/Users/User/Documents/Stork/Classes/StorkAppDelegate.m8617389856#1785"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/StorkAppDelegate.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/StorkAppDelegate.o0#
+lSLF07#2@62"Compile /Users/User/Documents/Stork/Classes/StorkAppDelegate.m356412215#356412215#0(0"0(0#0#54"/Users/User/Documents/Stork/Classes/StorkAppDelegate.m8624626144#1785"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/StorkAppDelegate.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/StorkAppDelegate.o0#
 
 CCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/StorkViewController.o /Users/User/Documents/Stork/Classes/StorkViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s352161393.058436
@@ -759,8 +824,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@54"Compile /Users/User/Documents/Stork/Classes/TreeNode.m355705048#355705048#0(0"0(0#0#46"/Users/User/Documents/Stork/Classes/TreeNode.m8616962048#1769"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/TreeNode.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/TreeNode.o0#
 
 CCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/TreeNodeCell.o /Users/User/Documents/Stork/Classes/TreeNodeCell.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s355705048.821467
-e355705048.960032
+s356401399.881273
+e356401400.122249
 r1
 xCompileC
 xbuild/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/TreeNodeCell.o
@@ -769,7 +834,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@58"Compile /Users/User/Documents/Stork/Classes/TreeNodeCell.m355705048#355705048#0(0"0(0#0#50"/Users/User/Documents/Stork/Classes/TreeNodeCell.m8606921792#1777"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/TreeNodeCell.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/TreeNodeCell.o0#
+lSLF07#2@58"Compile /Users/User/Documents/Stork/Classes/TreeNodeCell.m356401399#356401400#0(0"0(0#0#50"/Users/User/Documents/Stork/Classes/TreeNodeCell.m8640323744#1777"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/Classes/TreeNodeCell.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/TreeNodeCell.o0#
 
 CCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/main.o /Users/User/Documents/Stork/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s352709757.310694
@@ -783,6 +848,9 @@ xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
 lSLF07#2@42"Compile /Users/User/Documents/Stork/main.m352709757#352709757#0(0"0(0#0#34"/Users/User/Documents/Stork/main.m8623700384#1753"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -include /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch -c /Users/User/Documents/Stork/main.m -o /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/main.o0#
+
+CCompileC build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/untitled.o /Users/User/Documents/Stork/Classes/untitled.m normal i386 objective-c com.apple.compilers.gcc.4_2
+r0
 
 CCompileXIB /Users/User/Documents/Stork/MainWindow.xib
 s352709749.506322
@@ -864,23 +932,23 @@ xplus.png
 lSLF07#2@13"Copy plus.png355705048#355705048#0(0"0(0#0#36"/Users/User/Documents/Stork/plus.png8618311456#431"    cd /Users/User/Documents/Stork    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/User/Documents/Stork/plus.png /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app0#
 
 CGenerateDSYMFile /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app.dSYM /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Stork
-s355711701.822843
-e355711701.872891
+s356412217.398868
+e356412217.908011
 r1
 xGenerateDSYMFile
 x/Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app.dSYM
 x/Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Stork
-lSLF07#2@103"GenerateDSYMFile build/Debug-iphonesimulator/Stork.app.dSYM build/Debug-iphonesimulator/Stork.app/Stork355711701#355711701#0(0"0(0#0#71"/Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Stork8619189216#344"    cd /Users/User/Documents/Stork    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Stork -o /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app.dSYM0#
+lSLF07#2@103"GenerateDSYMFile build/Debug-iphonesimulator/Stork.app.dSYM build/Debug-iphonesimulator/Stork.app/Stork356412217#356412217#0(0"0(0#0#71"/Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Stork8635615136#344"    cd /Users/User/Documents/Stork    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Stork -o /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app.dSYM0#
 
 CLd /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Stork normal i386
-s355711701.726710
-e355711701.822571
+s356412216.280570
+e356412217.398335
 r1
 xLd
 x/Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Stork
 xnormal
 xi386
-lSLF07#2@76"Link /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Stork355711701#355711701#0(0"0(0#0#0"8619289664#857"    cd /Users/User/Documents/Stork    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/User/Documents/Stork/build/Debug-iphonesimulator -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -filelist /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/Stork.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework QuartzCore -o /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Stork0#
+lSLF07#2@76"Link /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Stork356412216#356412217#0(0"0(0#0#0"8637314656#857"    cd /Users/User/Documents/Stork    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/User/Documents/Stork/build/Debug-iphonesimulator -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -filelist /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Objects-normal/i386/Stork.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework QuartzCore -o /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Stork0#
 
 CProcessInfoPlistFile /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app/Info.plist Stork-Info.plist
 s352709749.417248
@@ -905,10 +973,10 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@27"Precompile Stork_Prefix.pch352709754#352709757#0(0"0(0#0#44"/Users/User/Documents/Stork/Stork_Prefix.pch8633495872#1658"    cd /Users/User/Documents/Stork    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-generated-files.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-own-target-headers.hmap -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-all-target-headers.hmap -iquote /Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/Stork-project-headers.hmap -F/Users/User/Documents/Stork/build/Debug-iphonesimulator -I/Users/User/Documents/Stork/build/Debug-iphonesimulator/include -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources/i386 -I/Users/User/Documents/Stork/build/Stork.build/Debug-iphonesimulator/Stork.build/DerivedSources -c /Users/User/Documents/Stork/Stork_Prefix.pch -o /var/folders/SZ/SZnyCXP+GDaP7FMZ0uPuKk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/Stork_Prefix-gaeeburyvznqsgeuilfzwjqivixg/Stork_Prefix.pch.gch0#
 
 CTouch /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app
-s355712112.116976
-e355712112.121424
+s356412217.908243
+e356412217.981503
 r1
 xTouch
 x/Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app
-lSLF07#2@71"Touch /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app355712112#355712112#0(0"0(0#0#0"8617506144#254"    cd /Users/User/Documents/Stork    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app0#
+lSLF07#2@71"Touch /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app356412217#356412217#0(0"0(0#0#0"8626544640#254"    cd /Users/User/Documents/Stork    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/User/Documents/Stork/build/Debug-iphonesimulator/Stork.app0#
 

@@ -88,7 +88,7 @@
 	}else{
 		[checkBoxButton setImage:[UIImage imageNamed:@"checkbox.png"] forState:UIControlStateNormal];
 	}
-	
+	NSLog(@"label ::: %@",[node label]);
 	[label setText:[node label]];
 }
 

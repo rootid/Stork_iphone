@@ -29,6 +29,7 @@
 +(HTTPHandler*)getSharedInstantance;
 
 -(void)getContentForURL :(NSString*)aURL;
+-(void)getPostContentForURL:(NSString*)aURL;
 -(void)cancelConnection;
 
 @end

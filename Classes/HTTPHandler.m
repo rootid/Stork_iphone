@@ -31,6 +31,33 @@
 	[super dealloc];
 }
 
+
+-(void)getPostContentForURL:(NSString*)aURL
+{
+	NSLog(@"%@",aURL);
+	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:aURL]];
+	
+	NSString *userName = @"enesy";
+	NSString *password = @"didclab202!";
+	NSString *ftpName =  @"rishibaldawa.com";
+	//ftp%rishibaldawa.com%21%.%enesy%didclab202!
+	const char *bytes = [[NSString stringWithFormat:@"ftp%%%@%%21%%.%%%@%%%@",
+						  ftpName,userName,password] UTF8String];
+	
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:[NSData dataWithBytes:bytes length:strlen(bytes)]];
+	
+	theConnection =[[NSURLConnection alloc] initWithRequest:request delegate:self]; 
+	
+	if (theConnection){
+		[recivedData release];
+		recivedData=[[NSMutableData alloc] init];
+	}else{ 
+		NSLog(@"ERROR IN CONNECTION!");
+	}
+	
+}
+
 -(void)getContentForURL:(NSString*)aURL
 {
 	NSLog(@"%@",aURL);

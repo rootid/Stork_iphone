@@ -11,6 +11,8 @@
 //Private member declaration
 @interface DummyMainController () 
 NSString *serverName;
+ServerInformation *serverInfo;
+-(void)populateServerInformation;
 @end
 
 @implementation DummyMainController
@@ -154,9 +156,28 @@ NSString *serverName;
 	return cell;
 	
 }
+
+-(void) populateServerInformation {
+	//username,password,protocol,portnumber,path
+	UITextField *localField;
+	serverInfo = [[ServerInformation alloc]init];
+	localField = [viewArray objectAtIndex:0];
+	[serverInfo setUserName:localField.text];
+	localField = [viewArray objectAtIndex:1];
+	[serverInfo setPassWord:localField.text];
+	localField = [viewArray objectAtIndex:2];
+	[serverInfo setProtoCol:localField.text];
+	localField = [viewArray objectAtIndex:4];
+	[serverInfo setPath:localField.text];
+	
+}
+
 -(void)submitButtonAction{
 
-	 DLSController *mainViewController = [[DLSController alloc] initWithTitle:serverName];
+	[self populateServerInformation];	
+	//DLSController *mainViewController = [[DLSController alloc] initWithTitle:serverName];
+	DLSController *mainViewController = [[DLSController alloc] initWithTitle:serverName 
+																  serverInformation:serverInfo];
 	//	//NSLog(@" server title %@",[serverListArray objectAtIndex:indexPath.row]);
 	 [self.navigationController pushViewController:mainViewController animated:YES];
 	 [mainViewController release];

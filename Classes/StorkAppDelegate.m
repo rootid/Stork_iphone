@@ -17,17 +17,32 @@
 {
 	HTTPHandler *httpObj=[HTTPHandler getSharedInstantance];
 	httpObj.delegate = self;
-	[httpObj getContentForURL:[NSString stringWithFormat:@"%@",URL_TEST]];
+	[httpObj getPostContentForURL:[NSString stringWithFormat:@"%@",URL_DLS]];
 	
 }
 
 
 - (void)connection:(HTTPHandler*)connection didReceiveData:(NSData *)data
 {
- 
 	NSString* aStr;
 	aStr = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-	NSLog(@"Data received %@",aStr);
+	//NSLog(@"Data received \n%@",aStr);
+	NSArray *fields = [aStr componentsSeparatedByString:@"\n"];
+	int i = 0;
+	for ( i = 0; i< [fields count]; i++) {
+		
+		NSString *file = [fields objectAtIndex:i];
+		if([file rangeOfString:@"%"].location == NSNotFound) {
+			NSLog(@"%@",file);
+		}
+		else {
+			NSArray *subfields = [file componentsSeparatedByString:@"%"];
+			NSLog(@"DIR %@ with file ",[subfields objectAtIndex:0]); //file
+			NSLog(@"DIR %@with file %@",[subfields objectAtIndex:1],file); //dir
+		}
+		
+	}
+	
 }
 - (void)connection:(HTTPHandler *)connection didFailWithError:(NSError *)error
 {

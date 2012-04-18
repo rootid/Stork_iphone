@@ -12,6 +12,7 @@
 #import "TreeNodeCell.h"
 #import "Constant.h"
 #import "HTTPHandler.h"
+#import "ServerInformation.h"
 
 @interface DLSController : UITableViewController<HTTPHandlerDelegate> {
 	
@@ -19,5 +20,6 @@
 	NSArray* elements;
 
 }
+- (id) initWithTitle:(NSString *)title serverInformation:(ServerInformation *)aServerInfo;
 
 @end

@@ -14,7 +14,6 @@
 
 DataAdapter *dataAdapter;
 NSArray *serverListArray;
-
 @end
 
 @implementation HomeServerViewController
@@ -158,6 +157,7 @@ NSArray *serverListArray;
     return YES;
 }
 */
+
 
 
 #pragma mark -

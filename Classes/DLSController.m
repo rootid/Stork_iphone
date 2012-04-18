@@ -16,6 +16,10 @@ NSArray *folderListArray;
 -(void)initWithInitialData;
 -(void)onExpandedButtonTouch :(TreeNode *) node;
 -(void) initHTTPReceiver;
+-(void) initwithDataFromURI:(NSString *) response;
+UIActivityIndicatorView *activityIndicator;
+BOOL isloaded = false;
+ServerInformation *serverInfo;
 @end
 
 @implementation DLSController
@@ -35,7 +39,28 @@ NSArray *folderListArray;
 }
 
 
+- (id) initWithTitle:(NSString *)title serverInformation:(ServerInformation *)aServerInfo
+{
+	if (self = [super initWithStyle:UITableViewCellStyleDefault]) {
+        // Custom initialization
+		[self.navigationItem setTitle:title];		
+    }
+	serverInfo = aServerInfo;
+	return self;
+}
 
+
+-(void) loadActivity {
+	activityIndicator = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+	activityIndicator.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
+	activityIndicator.center = self.view.center;
+	[self.view addSubview: activityIndicator];
+	[activityIndicator startAnimating];
+}
+
+-(void) stopActivity {
+	[activityIndicator stopAnimating];
+}
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -44,9 +69,11 @@ NSArray *folderListArray;
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
-    dataAdapter = [[DataAdapter alloc] init];
-	[dataAdapter initializeDirList];
-	folderListArray = [[NSArray alloc] initWithArray:dataAdapter.folderList];
+   // dataAdapter = [[DataAdapter alloc] init];
+	[self initHTTPReceiver];
+	[self loadActivity];
+	//[dataAdapter initializeDirList];
+//	folderListArray = [[NSArray alloc] initWithArray:dataAdapter.folderList];
 	
 	UIBarButtonItem *uploadButton = [[UIBarButtonItem alloc] initWithTitle:UPLOAD 
 									style:UIBarButtonItemStylePlain 
@@ -55,15 +82,64 @@ NSArray *folderListArray;
 	[uploadButton release];
 	
 	tree = [[Tree alloc] init];
-	[self initHTTPReceiver];
-	[self initWithInitialData];
+	
+	NSLog(@"After receiveing the data");
+	//[self initWithInitialData];
 	
 }
 
 -(void)initHTTPReceiver {
 	HTTPHandler *httpObj=[HTTPHandler getSharedInstantance];
 	httpObj.delegate = self;
-	[httpObj getContentForURL:[NSString stringWithFormat:@"%@",URL_TEST]];
+	[httpObj getPostContentForURL:[NSString stringWithFormat:@"%@",URL_DLS]];
+}
+
+-(void) initwithDataFromURI:(NSString *) response {
+
+	NSArray *fields = [response componentsSeparatedByString:@"\n"];
+	int i = 0;
+	TreeNode *dirNode,*fileNode,*root,*dummyNode;
+	root = [[[TreeNode alloc] init] retain];
+	[root setLabel:@"root"];
+	
+	for ( i = 0; i< [fields count]; i++) {
+		
+		NSString *file = [[fields objectAtIndex:i] retain];
+		if([file rangeOfString:@"%"].location == NSNotFound) {
+			NSLog(@"%@",file);
+			fileNode = [[[TreeNode alloc] init] retain];
+			//[fileNode setLabel:file];
+			[fileNode setLabel:file];
+			[root addChildren:fileNode];
+		}
+		else {
+			NSArray *subfields = [file componentsSeparatedByString:@"%"];
+			//file
+			fileNode = [[[TreeNode alloc] init] retain];
+			//[fileNode setLabel:[subfields objectAtIndex:0]];
+			[fileNode setLabel:[[subfields objectAtIndex:1]retain]];
+			[root addChildren:fileNode];
+			NSLog(@"DIR %@with file %@",[subfields objectAtIndex:1],file); 
+			//dir	
+			dirNode = [[[TreeNode alloc] init] retain];
+			//[dirNode setLabel:[subfields objectAtIndex:1]];
+			[dirNode setLabel:[[subfields objectAtIndex:1]retain]];
+			dummyNode = [[[TreeNode alloc] init] retain];
+			[dummyNode setLabel:@"con"];
+			[dirNode addChildren:dummyNode];
+			[root addChildren:dirNode];
+		}
+		
+	}
+	[tree setRoot:root];
+	[root unSetRecursively];
+	
+	if([[root children] count] > 0){
+		[root setExpanded:![root expanded]];
+	}
+	elements = [tree arrayRappresentation];
+	
+	[self onExpandedButtonTouch:root];
 }
 
 -(void)initWithInitialData {
@@ -101,11 +177,18 @@ NSArray *folderListArray;
 #pragma mark -
 #pragma mark HTTP delegate
 - (void)connection:(HTTPHandler*)connection didReceiveData:(NSData *)data
-{
-	
+{	
 	NSString* aStr;
 	aStr = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-	NSLog(@"Data received %@",aStr);
+	//NSLog(@"Data received %@",aStr);
+	isloaded = true;
+		
+	//[dataAdapter initializeDirList];
+	//folderListArray = [[NSArray alloc] initWithArray:dataAdapter.folderList];
+	[self initwithDataFromURI:aStr];
+	//[self initWithInitialData];
+	[self stopActivity];
+	//[self.tableView reloadData];
 }
 - (void)connection:(HTTPHandler *)connection didFailWithError:(NSError *)error
 {
@@ -181,7 +264,13 @@ NSArray *folderListArray;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
+	if(isloaded) {
     return [elements count];
+	}
+	else {
+		return 1;
+	}
+
 }
 
 
@@ -194,13 +283,14 @@ NSArray *folderListArray;
     if (cell == nil) {
         cell = [[[TreeNodeCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
-    
-	TreeNode* node = [elements objectAtIndex:indexPath.row];
-	[cell setOwner:self];
-	[cell setOnExpandedButtonTouch:@selector(onExpandedButtonTouch:)];
-	[cell setOnCheckboxSelected:@selector(onCheckboxSelected:)];
-	[cell setTreeNode:node];
-	
+    if (isloaded) {
+		TreeNode* node = [elements objectAtIndex:indexPath.row];
+		[cell setOwner:self];
+		[cell setOnExpandedButtonTouch:@selector(onExpandedButtonTouch:)];
+		[cell setOnCheckboxSelected:@selector(onCheckboxSelected:)];
+		[cell setTreeNode:node];
+		
+	}
     return cell;
 }
 
