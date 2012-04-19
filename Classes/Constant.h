@@ -25,6 +25,7 @@
 #define PROTOCOL_TEXT  3
 #define PORT_NUMBER_TEXT 4
 #define PATH_TEXT 5
-#define URL_DLS @"http://67.20.215.162:8080/StorkDirectoryService/dls/listM"
+//#define URL_DLS @"http://67.20.212.205:8080/StorkDirectoryService/dls/list2"
+#define URL_DLS @"http://184.73.223.158:8080/StorkDirectoryService/dls/list"
 #define URL_TEST @"http://www.w3schools.com/xml/xml_server.asp"
 

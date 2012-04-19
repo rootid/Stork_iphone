@@ -30,6 +30,7 @@
 
 -(void)getContentForURL :(NSString*)aURL;
 -(void)getPostContentForURL:(NSString*)aURL;
+-(void)getPostContentForURL1:(NSString*)aURL;
 -(void)cancelConnection;
 
 @end

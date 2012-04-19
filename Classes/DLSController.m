@@ -91,7 +91,7 @@ ServerInformation *serverInfo;
 -(void)initHTTPReceiver {
 	HTTPHandler *httpObj=[HTTPHandler getSharedInstantance];
 	httpObj.delegate = self;
-	[httpObj getPostContentForURL:[NSString stringWithFormat:@"%@",URL_DLS]];
+	[httpObj getPostContentForURL1:[NSString stringWithFormat:@"%@",URL_DLS]];
 }
 
 -(void) initwithDataFromURI:(NSString *) response {
