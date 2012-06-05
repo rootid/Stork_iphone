@@ -10,7 +10,7 @@
 
 
 @implementation ServerInformation
-@synthesize userName,passWord,path,protoCol;
+@synthesize userName,passWord,pathName,protoCol,serverName,portNumber;
 - (id) init
 {
 	self = [super init];

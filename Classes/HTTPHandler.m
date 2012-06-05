@@ -80,14 +80,50 @@
 //	}
 	
 }
-
-
--(void)getPostContentForURL1:(NSString*)aURL
+		
+-(void)getPostContentForURL1:(NSString *)aURL information:(ServerInformation *)aServerInfo
+{
+	NSString *userName = [aServerInfo userName];
+	NSString *password = [aServerInfo passWord];
+	NSString *ftpName =  [aServerInfo serverName];
+	NSString *protocol = [aServerInfo protoCol];
+	int portNumber = [aServerInfo portNumber];
+	NSString *filePath = [aServerInfo pathName];
+	NSString *key = @"client_info";
+	
+	NSLog(@"%@",aURL);
+	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:aURL]];
+	[request setHTTPMethod:@"POST"];
+	[request setValue:@"application/xml" forHTTPHeaderField:@"Content-Type"];
+	NSString *value = [NSString stringWithFormat:@"%@%@%@%@%d%@%@%@%@%@%@%@",protocol,ESC_CHAR,ftpName,ESC_CHAR,
+					   portNumber,ESC_CHAR,filePath,ESC_CHAR,userName,ESC_CHAR,password,ESC_CHAR];
+	NSString *requestPara = [NSString stringWithFormat:@"%@=%@",key,value];
+	NSMutableData *body = [NSMutableData data];
+	[body appendData:[requestPara dataUsingEncoding:NSUTF8StringEncoding]];
+	[request setHTTPBody:body];
+	[request addValue:[NSString stringWithFormat:@"%d", [body length]] forHTTPHeaderField:@"Content-Length"];
+	
+	theConnection =[[NSURLConnection alloc] initWithRequest:request delegate:self]; 
+	
+	if (theConnection){
+		[recivedData release];
+		recivedData=[[NSMutableData alloc] init];
+	}else{ 
+		NSLog(@"ERROR IN CONNECTION!");
+	}
+	
+	
+}
+-(void)getPostContentForURL2:(NSString*)aURL
 {
 	
-	NSString *userName = @"earslan";
-	NSString *password = @"Ilknur58*";
-	NSString *ftpName =  @"login1.ls4.tacc.utexas.edu";
+	NSString *userName = @"ubuntu";
+	NSString *password = @"didclab";
+	NSString *ftpName =  @"ec2-23-20-170-141.compute-1.amazonaws.com";
+	NSString *protocol = @"ftp";
+	int portNumber = 21;
+	NSString *filePath = @"./";
+	NSString *key = @"client_info";
 	NSURLResponse * response = nil;
 	NSError * err = nil;
 	
@@ -96,7 +132,13 @@
 	[request setHTTPMethod:@"POST"];
 	[request setValue:@"application/xml" forHTTPHeaderField:@"Content-Type"];	
 	
-	NSString *test = @"client_info=sftp%25login1.ls4.tacc.utexas.edu%2522%25.%2F%25earslan%25Ilknur58*%25";
+	//NSString *test = @"client_info=sftp%25login1.ls4.tacc.utexas.edu%2522%25.%2F%25earslan%25Ilknur58*%25";
+	//ftp%ec2-23-20-170-141.compute-1.amazonaws.com%21%stork/%ubuntu%didclab
+	//NSString *test1 = @"client_info=ftp%25ec2-23-20-170-141.compute-1.amazonaws.com%2521%25./%25ubuntu%25didclab%25";
+	NSString *value = [NSString stringWithFormat:@"%@%@%@%@%d%@%@%@%@%@%@%@",protocol,ESC_CHAR,ftpName,ESC_CHAR,
+					   portNumber,ESC_CHAR,filePath,ESC_CHAR,userName,ESC_CHAR,password,ESC_CHAR];
+	NSString *test = [NSString stringWithFormat:@"%@=%@",key,value];
+	
 	/*
 	 now lets create the body of the request.
 	 */

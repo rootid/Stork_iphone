@@ -16,9 +16,12 @@ NSArray *folderListArray;
 -(void)initWithInitialData;
 -(void)onExpandedButtonTouch :(TreeNode *) node;
 -(void) initHTTPReceiver;
--(void) initwithDataFromURI:(NSString *) response;
+-(void) initwithDataFromURI:(NSString *) response nodeInfo:(TreeNode *)node;
+-(void) loadDataFromURI:(NSString *)response;
 UIActivityIndicatorView *activityIndicator;
+TreeNode *selectedNode;
 BOOL isloaded = false;
+BOOL isInitiated = false;
 ServerInformation *serverInfo;
 @end
 
@@ -69,11 +72,11 @@ ServerInformation *serverInfo;
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
-   // dataAdapter = [[DataAdapter alloc] init];
 	[self initHTTPReceiver];
-	[self loadActivity];
+	//[self loadActivity];
+	//dataAdapter = [[DataAdapter alloc] init];
 	//[dataAdapter initializeDirList];
-//	folderListArray = [[NSArray alloc] initWithArray:dataAdapter.folderList];
+	folderListArray = [[NSArray alloc] initWithArray:dataAdapter.folderList];
 	
 	UIBarButtonItem *uploadButton = [[UIBarButtonItem alloc] initWithTitle:UPLOAD 
 									style:UIBarButtonItemStylePlain 
@@ -88,10 +91,50 @@ ServerInformation *serverInfo;
 	
 }
 
+
 -(void)initHTTPReceiver {
 	HTTPHandler *httpObj=[HTTPHandler getSharedInstantance];
 	httpObj.delegate = self;
-	[httpObj getPostContentForURL1:[NSString stringWithFormat:@"%@",URL_DLS]];
+	[httpObj getPostContentForURL1:[NSString stringWithFormat:@"%@",URL_DLS] information:serverInfo];
+}
+
+-(void) loadDataFromURI:(NSString *) response nodeInfo:(TreeNode *)node {
+	NSArray *fields = [response componentsSeparatedByString:@"\n"];
+	TreeNode *dirNode,*fileNode,*dummyNode;
+	int i = 0;
+	for ( i = 0; i< [fields count]; i++) {
+		NSString *file = [[fields objectAtIndex:i] retain];
+		if([file rangeOfString:@"%"].location == NSNotFound) {
+			NSLog(@"%@",file);
+			fileNode = [[[TreeNode alloc] init] retain];
+			[fileNode setLabel:file];
+			[node addChildren:fileNode];
+		}
+		else {
+			NSArray *subfields = [file componentsSeparatedByString:@"%"];
+			//file
+			fileNode = [[[TreeNode alloc] init] retain];
+			[fileNode setLabel:[[subfields objectAtIndex:1]retain]];
+			[node addChildren:fileNode];
+			NSLog(@"DIR %@with file %@",[subfields objectAtIndex:1],file); 
+			//dir	
+			dirNode = [[[TreeNode alloc] init] retain];
+			[dirNode setLabel:[[subfields objectAtIndex:1]retain]];
+			dummyNode = [[[TreeNode alloc] init] retain];
+			[dummyNode setLabel:@"con"];
+			[dirNode addChildren:dummyNode];
+			[node addChildren:dirNode];
+		}
+		
+	}
+	[node unSetRecursively];
+	[node setIsVisited:true];
+	if([[node children] count] > 0){
+		[node setExpanded:![node expanded]];
+	}
+	elements = [tree arrayRappresentation];
+	[self onExpandedButtonTouch:node];
+	
 }
 
 -(void) initwithDataFromURI:(NSString *) response {
@@ -100,8 +143,8 @@ ServerInformation *serverInfo;
 	int i = 0;
 	TreeNode *dirNode,*fileNode,*root,*dummyNode;
 	root = [[[TreeNode alloc] init] retain];
-	[root setLabel:@"root"];
-	
+	[root setLabel:@"root"]; //determine the start point
+	[root setIsVisited:YES];
 	for ( i = 0; i< [fields count]; i++) {
 		
 		NSString *file = [[fields objectAtIndex:i] retain];
@@ -140,6 +183,8 @@ ServerInformation *serverInfo;
 	elements = [tree arrayRappresentation];
 	
 	[self onExpandedButtonTouch:root];
+	
+	isInitiated = true;
 }
 
 -(void)initWithInitialData {
@@ -185,7 +230,12 @@ ServerInformation *serverInfo;
 		
 	//[dataAdapter initializeDirList];
 	//folderListArray = [[NSArray alloc] initWithArray:dataAdapter.folderList];
-	[self initwithDataFromURI:aStr];
+	if(isInitiated == false) {
+		[self initwithDataFromURI:aStr];
+	}
+	else {
+		[self loadDataFromURI:aStr nodeInfo:selectedNode];
+	}
 	//[self initWithInitialData];
 	[self stopActivity];
 	//[self.tableView reloadData];
@@ -202,15 +252,26 @@ ServerInformation *serverInfo;
 -(void)onExpandedButtonTouch:(TreeNode*)node{
 	
 	NSLog(@"selected tree : %@",[node label]);
-	//TreeNode *node1 = [tree root];
-	//	TreeNode* child1=[[[TreeNode alloc] init] retain];
-	//	TreeNode* child2=[[[TreeNode alloc] init] retain];
-	//	[child1 setLabel:@"child12"];
-	//	[child2 setLabel:@"child2"];
-	//	[node1 addChildren:child1];
-	//	[node1 addChildren:child2];
-	elements = [tree arrayRappresentation];
-	[self.tableView reloadData];	
+	if([node isVisited] == NO) {
+		[serverInfo setPathName:[node label]];
+		[node setExpanded:NO];
+		selectedNode = node;
+		[self initHTTPReceiver];
+		NSLog(@"node other than root selected");
+		
+	}
+	else {
+		elements = [tree arrayRappresentation];
+		[self.tableView reloadData];
+	}
+//	TreeNode *node1 = [tree root];
+//	TreeNode* child1=[[[TreeNode alloc] init] retain];
+//	TreeNode* child2=[[[TreeNode alloc] init] retain];
+//	[child1 setLabel:@"child12"];
+//	[child2 setLabel:@"child2"];
+//	[node1 addChildren:child1];
+//	[node1 addChildren:child2];
+		
 }
 
 -(void)onCheckboxSelected :(TreeNode *)node {

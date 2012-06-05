@@ -24,6 +24,7 @@
 #define PASS_WORD_TEXT 2
 #define PROTOCOL_TEXT  3
 #define PORT_NUMBER_TEXT 4
+#define ESC_CHAR @"%25"
 #define PATH_TEXT 5
 //#define URL_DLS @"http://67.20.212.205:8080/StorkDirectoryService/dls/list2"
 #define URL_DLS @"http://184.73.223.158:8080/StorkDirectoryService/dls/list"

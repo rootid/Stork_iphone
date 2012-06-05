@@ -161,14 +161,21 @@ ServerInformation *serverInfo;
 	//username,password,protocol,portnumber,path
 	UITextField *localField;
 	serverInfo = [[ServerInformation alloc]init];
-	localField = [viewArray objectAtIndex:0];
-	[serverInfo setUserName:localField.text];
-	localField = [viewArray objectAtIndex:1];
-	[serverInfo setPassWord:localField.text];
-	localField = [viewArray objectAtIndex:2];
-	[serverInfo setProtoCol:localField.text];
-	localField = [viewArray objectAtIndex:4];
-	[serverInfo setPath:localField.text];
+	//localField = [viewArray objectAtIndex:0];
+//	[serverInfo setUserName:localField.text];
+//	localField = [viewArray objectAtIndex:1];
+//	[serverInfo setPassWord:localField.text];
+//	localField = [viewArray objectAtIndex:2];
+//	[serverInfo setProtoCol:localField.text];
+//	localField = [viewArray objectAtIndex:4];
+//	[serverInfo setPathName:localField.text];
+	
+	[serverInfo setUserName:@"ubuntu"];
+	[serverInfo setPassWord:@"didclab"];
+	[serverInfo setProtoCol:@"ftp"];
+	[serverInfo setPortNumber:21];
+	[serverInfo setPathName:@"./"];
+	[serverInfo setServerName:@"ec2-23-20-170-141.compute-1.amazonaws.com"];
 	
 }
 

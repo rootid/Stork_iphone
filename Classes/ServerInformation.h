@@ -7,18 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-
+//There are 2 types of notations 1.object(needs NsString*) 2.scalar(needs only assign)
 
 @interface ServerInformation : NSObject {
 	NSString *userName;
 	NSString *passWord;
-	NSString *path;
-	int portNumber;	
+	NSString *pathName;
+	NSInteger portNumber;	
 	NSString *protoCol;
+	NSString *serverName;
 	
 }
 @property(nonatomic,retain) NSString* userName;
 @property(nonatomic,retain) NSString* passWord;
-@property(nonatomic,retain) NSString* path;
+@property(nonatomic,retain) NSString* pathName;
 @property(nonatomic,retain) NSString* protoCol;
+@property(nonatomic,retain) NSString* serverName;
+@property(nonatomic,assign) NSInteger portNumber;
 @end

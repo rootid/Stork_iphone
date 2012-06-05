@@ -1,1 +1,3 @@
-/Users/User/Documents/Stork/Classes/ServerInformation.m:13: error: no declaration of property 'protoCol' found in the interface
+/Users/User/Documents/Stork/Classes/ServerInformation.m:13: error: no declaration of property 'pathName' found in the interface
+/Users/User/Documents/Stork/Classes/ServerInformation.m:23: warning: property 'path' requires method '-path' to be defined - use @synthesize, @dynamic or provide a method implementation
+/Users/User/Documents/Stork/Classes/ServerInformation.m:23: warning: property 'path' requires the method 'setPath:' to be defined - use @synthesize, @dynamic or provide a method implementation

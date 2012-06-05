@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "Constant.h"
+#import "ServerInformation.h"
 @class HTTPHandler;
 
 @protocol HTTPHandlerDelegate
@@ -30,7 +31,8 @@
 
 -(void)getContentForURL :(NSString*)aURL;
 -(void)getPostContentForURL:(NSString*)aURL;
--(void)getPostContentForURL1:(NSString*)aURL;
+-(void)getPostContentForURL2:(NSString*)aURL;
 -(void)cancelConnection;
+-(void)getPostContentForURL1:(NSString *)aURL information:(ServerInformation *)aServerInfo;
 
 @end
