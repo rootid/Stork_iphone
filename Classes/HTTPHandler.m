@@ -209,9 +209,9 @@
 	{
 		NSURLCredential *newCredential;
 		//Enter Persistent Cridential 
-		newCredential=[NSURLCredential credentialWithUser:@"vikramsi"		
-												 password:@"sunrisE!23"
-											  persistence:NSURLCredentialPersistenceNone];
+		newCredential=[NSURLCredential credentialWithUser:@"vikramsi"	
+					       password:@"ramharekrishna@#$"
+					       persistence:NSURLCredentialPersistenceNone];
 		[[challenge sender] useCredential:newCredential forAuthenticationChallenge:challenge];
 		
 	}
