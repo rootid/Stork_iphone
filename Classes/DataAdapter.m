@@ -40,7 +40,7 @@
 - (void) initializeDirList
 {
 	NSString *list = DIR_LIST;
-	
+	//populate dirs
 	folderList = [list componentsSeparatedByString:@","];
 
 }
